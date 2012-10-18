@@ -38,8 +38,8 @@
   (scroll-bar-mode -1)
 
   ;; Color Themes
-  (require 'color-theme-solarized)
-  (color-theme-solarized-light)
+  ;(require 'color-theme-solarized)
+  ;(color-theme-solarized-light)
   ;(color-theme-solarized-dark)
   ;(color-theme-desert)
   ;(color-theme-bespin-mod)
@@ -78,6 +78,10 @@
 
 ;; Enable "a" key for dired mode
 (put 'dired-find-alternate-file 'disabled nil)
+
+;; Enable emacs ls emulation to prevent annoying ls warnings on some systems 
+(setq ls-lisp-use-insert-directory-program nil)
+(require 'ls-lisp)
 
 ;; LaTeX key bindings
 (add-hook 'latex-mode-hook
@@ -158,7 +162,7 @@
 ;; to force it to utilize this path for all cases
 (setq-default py-shell-name "/usr/local/bin/python")
 
-1;; Google Go mode
+;; Google Go mode
 (require 'go-mode-load)
 
 ;; Nu mode
